@@ -28,6 +28,7 @@ Local currencies on blockchain
         </tr>
   </table>
 </div>
+
 <!-- 👯 Je cherche à collaborer **pour sauver le monde.** -->
  ## Local currencies on blockchain : shemas général
 <!-- shemas --> 
@@ -57,6 +58,11 @@ function autonomousWorld() {
  return console.log("Sorry, i can do nothing for save the world.");
 }
 ```
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### We have to find a place to start!
 
 ```topojson
  {
@@ -92,37 +98,11 @@ function autonomousWorld() {
    "arcs": [[[4000, 0], [1999, 9999], [2000, -9999], [2000, 9999]],[[0, 0], [0, 9999], [2000, 0] , [0, -9999], [-2000, 0]]]
  }
  ```
+
+</p>
+</details>
+
+
+
+
  
- 
- ```stl
- solide cube_corner
-   facette normale 0,0 -1,0 0,0
-     boucle extérieure
-       sommet 0,0 0,0 0,0
-       sommet 1.0 0.0 0.0
-       sommet 0,0 0,0 1,0
-     boucle d'extrémité
-   facette
-   facette normale 0,0 0,0 -1,0
-     boucle externe
-       sommet 0,0 0,0 0,0
-       sommet 0,0 1,0 0,0
-       sommet 1.0 0.0 0.0
-     boucle d'extrémité
-   facette
-   facette normale -1,0 0,0 0,0
-     boucle externe
-       sommet 0,0 0,0 0,0
-       sommet 0,0 0,0 1,0
-       sommet 0,0 1,0 0,0
-     boucle d'extrémité
-   facette
-   facette normale 0,577 0,577 0,577
-     boucle externe
-       sommet 1.0 0.0 0.0
-       sommet 0,0 1,0 0,0
-       sommet 0,0 0,0 1,0
-     boucle d'extrémité
-   facette
- bout solide
- ```
