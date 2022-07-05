@@ -33,20 +33,21 @@ Local currencies on blockchain
 <!-- shemas --> 
 
 ```mermaid
-  graph TD;
-       local-money-->New-Projects;
-       ESS-Projects-->local-development;
+  graph TD
+       A((local-money))--1 local nivel-->D(New-Projects);
+       B{ESS-Projects}-- 3 local teritorial -->local-development;
        local-development-->local-protection;
-       local-development-->local-money;
+       local-development-->A((local-money));
        local-protection-->New-local-activities;
-       local-protection-->local-money;
-       New-local-activities-->local-money;
-       New-local-activities-->money;
-       money-->New-Projects;
-       money-->local-money;
-       New-Projects-->ESS-Projects;
+       local-protection-->A((local-money));
+       New-local-activities-->A((local-money));
+       New-local-activities-->C(money);
+       C(money)-->D(New-Projects);
+       C(money)-->A((local-money));
+       D(New-Projects)-- 2 local nivel -->B{ESS-Projects};
 
 ```
+
 ```javascript
 const franckdun = new Project_Blockchain();
 function autonomousWorld() {
@@ -56,3 +57,72 @@ function autonomousWorld() {
  return console.log("Sorry, i can do nothing for save the world.");
 }
 ```
+
+```topojson
+ {
+   "type": "Topologie",
+   "transformer": {
+     "échelle": [0.0005000500050005, 0.00010001000100010001],
+     "traduire": [100, 0]
+   },
+   "objets": {
+     "Exemple": {
+       "type": "GeometryCollection",
+       "géométries": [
+         {
+           "type": "Point",
+           "propriétés": {"prop0": "valeur0"},
+           "coordonnées": [4000, 5000]
+         },
+         {
+           "type": "ChaîneLigne",
+           "propriétés": {"prop0": "valeur0", "prop1": 0},
+           "arcs": [0]
+         },
+         {
+           "type": "Polygone",
+           "propriétés": {"prop0": "valeur0",
+             "prop1": {"ceci": "cela"}
+           },
+           "arc": [[1]]
+         }
+       ]
+     }
+   },
+   "arcs": [[[4000, 0], [1999, 9999], [2000, -9999], [2000, 9999]],[[0, 0], [0, 9999], [2000, 0] , [0, -9999], [-2000, 0]]]
+ }
+ ```
+ 
+ 
+ ```stl
+ solide cube_corner
+   facette normale 0,0 -1,0 0,0
+     boucle extérieure
+       sommet 0,0 0,0 0,0
+       sommet 1.0 0.0 0.0
+       sommet 0,0 0,0 1,0
+     boucle d'extrémité
+   facette
+   facette normale 0,0 0,0 -1,0
+     boucle externe
+       sommet 0,0 0,0 0,0
+       sommet 0,0 1,0 0,0
+       sommet 1.0 0.0 0.0
+     boucle d'extrémité
+   facette
+   facette normale -1,0 0,0 0,0
+     boucle externe
+       sommet 0,0 0,0 0,0
+       sommet 0,0 0,0 1,0
+       sommet 0,0 1,0 0,0
+     boucle d'extrémité
+   facette
+   facette normale 0,577 0,577 0,577
+     boucle externe
+       sommet 1.0 0.0 0.0
+       sommet 0,0 1,0 0,0
+       sommet 0,0 0,0 1,0
+     boucle d'extrémité
+   facette
+ bout solide
+ ```
