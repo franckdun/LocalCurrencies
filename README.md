@@ -12,7 +12,7 @@ Local currencies on blockchain
                         Local currencies on blockchain. 
                     </p>
 		    <p align="center">
-			    <a href="mailto:scorven7@gmail.com"> SEND A EMAIL </a>
+			    <a href="mailto:scorven7@gmail.com" target="_blank"> SEND A EMAIL </a>
 		    </p>
 		</td>
             <td width="50%">
